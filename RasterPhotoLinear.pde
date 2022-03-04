@@ -2,9 +2,9 @@ import processing.pdf.*;
 
 PImage myImg;
 
-float wRes = 50;
-float hRes = 120;
-float maxWidth = 5;
+float wRes = 50;   
+float hRes = 120;  //Density of lines
+float maxWidth = 5; //max width of vector shapes
 
 void setup() {
   size(1600,1200);
