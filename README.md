@@ -1,7 +1,7 @@
 # RasterPhotoLinear
 
 ### Processing setup
-* Install [Processing](processing.org/download). 
+* Install [Processing](https://processing.org/download). 
 
 * Make sure the code (the .PDE file) is placed in a folder with the same name as the PDE file. In this case, that would be "RasterPhotoLinear". Place the folder wherever you put your other Processing projects.
 
