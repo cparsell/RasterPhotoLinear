@@ -25,21 +25,25 @@ void draw() {
   //noFill();
   fill(0);
   stroke(0);
+  
   for (int h = 0; h < myImg.height; h=h+(int(height/hRes))) {
     beginShape();
+    
     for (int w = 0; w < myImg.width; w=w+(int(width/wRes))) {
       tone = brightness(myImg.get(w,h));  //measure brightness of sampled pixel
       offs = map(tone,255,0,1,maxWidth);  //map brightness to size of vector shapes
       curveVertex(w, h+offs); 
     }
+    
     curveVertex(myImg.width, h);
+    
     for (int w = myImg.width; w > myImg.width/wRes; w=w-(int(width/wRes))) {  
       //follow line in reverse to offset vector shapes in the other direction and close the shape
-      
       tone = brightness(myImg.get(w,h));
       offs = map(tone,255,0,-1,-1*maxWidth);
       curveVertex(w, h+offs);
     }
+    
     curveVertex(0, h);
     endShape(CLOSE);
   }    
